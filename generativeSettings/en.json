@@ -1,6 +1,6 @@
 {
   "fallbackSettings": {
-  
+    "selectedPrompt": "Default"
   },
   "generativeSafetySettings": {
     "raiSettings": {
@@ -34,7 +34,8 @@
       } ]
     },
     "promptSecuritySettings": {
-    
+      "sensitivityLevel": 3,
+      "minQueryLength": 15
     }
   },
   "languageCode": "en",
@@ -44,7 +45,12 @@
     }
   },
   "llmModelSettings": {
-    "model": "gemini-2.5-flash"
+    "model": "gemini-2.5-flash",
+    "parameters": {
+      "temperature": 0.89999998,
+      "inputTokenLimit": "INPUT_TOKEN_LIMIT_SHORT",
+      "outputTokenLimit": "OUTPUT_TOKEN_LIMIT_SHORT"
+    }
   },
   "playbookSettings": {
     "memoryRetentionSettings": {
