@@ -1,0 +1,12 @@
+{
+  "displayName": "Flght Assistant CX",
+  "defaultLanguageCode": "en",
+  "timeZone": "America/New_York",
+  "projectNumber": 676968948406,
+  "startFlow": "Default Start Flow",
+  "advancedSettings": {
+    "loggingSettings": {
+    
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "f851342e-388f-4dcc-895b-28bfed81b931",
+  "displayName": "flight-webhook",
+  "genericWebService": {
+    "uri": "https://dialogflow-webhook-676968948406.us-east1.run.app",
+    "webhookType": "STANDARD"
+  },
+  "timeout": {
+    "seconds": 10
+  }
+}

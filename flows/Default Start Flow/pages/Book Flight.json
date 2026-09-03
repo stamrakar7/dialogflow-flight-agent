@@ -1,0 +1,96 @@
+{
+  "name": "a8694006-c68c-4a32-b924-4951e572184d",
+  "displayName": "Book Flight",
+  "form": {
+    "parameters": [ {
+      "displayName": "destination",
+      "required": true,
+      "entityType": "@sys.geo-city",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Where would you like to fly" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "travel_date",
+      "required": true,
+      "entityType": "@sys.date",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "what date would you like to travel" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "passengers",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "How many Passsengers are travelling?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You want to fly to $session.params.destination on $session.params.travel_date for $session.params.passengers passengers. Is that correct?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Confirm Flight",
+    "name": "5daac890-d082-42fc-8cd5-d1fff67e8e2d"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am sorry. I didn't understand that. Please tell me your destination city." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5a9298ea-9992-4820-8dcd-235691f7046b"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't hear a response. What city would you like to fly to?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "059aa2f2-2e96-4d56-948f-d462dde04dac"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "'m still waiting for your response. Please tell me the city you'd like to fly to" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "c72d4b94-8837-4211-9f61-2db527bf0f19"
+  } ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "17cf568b-7b13-444b-bd57-96b0ef52e652",
+  "displayName": "Update Flight",
+  "form": {
+    "parameters": [ {
+      "displayName": "destination",
+      "required": true,
+      "entityType": "@sys.geo-city",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What is your new destination" ]
+            },
+            "languageCode": "en"
+          } ],
+          "setParameterActions": [ {
+            "parameter": "destination",
+            "value": null
+          } ]
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "What would you like to change — the destination, travel date, or number of passengers?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "change.destination",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "What is your new destination?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "11159679-dd93-404c-b753-459d2bcb66f3"
+  } ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "44aa7a64-3f6d-481b-8d4a-4c307ac5e780",
+  "displayName": "Confirm Flight",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "confirm.yes",
+    "triggerFulfillment": {
+      "webhook": "flight-webhook",
+      "tag": "book-flight"
+    },
+    "name": "5a90fa09-a6fa-45b7-ae0e-e76be5c10333"
+  }, {
+    "intent": "confirm.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "ok lets update your flight details" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Update Flight",
+    "name": "71a168f9-3275-4293-92ae-0b367f7d1ba4"
+  } ]
+}

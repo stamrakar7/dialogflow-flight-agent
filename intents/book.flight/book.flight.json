@@ -1,0 +1,7 @@
+{
+  "name": "65618814-860b-43f5-a7a9-0072ecf60075",
+  "displayName": "book.flight",
+  "priority": 500000,
+  "description": "Customer wants to book a flight.",
+  "numTrainingPhrases": 5
+}
